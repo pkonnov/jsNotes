@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+
+  <div class="input_row input_policy_row clearafter input-parent">
+      <label class="nice_input_checkbox">
+          <input type="checkbox" name="law">
+          <span></span>
+      </label>
+      <div class="input_policy_text"><a href="#" target="_blank">C правилами обработки</a> персональных данных ознакомлен</div>
+  </div>
+  <style>
+      .nice_input_checkbox{
+          display: inline-block;
+          margin-right: 20px;
+      }
+      .nice_input_checkbox input{
+          display: none;
+      }
+      .nice_input_checkbox span{
+          position: relative;
+          display: block;
+          width: 20px;
+          height: 20px;
+          border-radius:3px;
+          background-color: #f8f6f6;
+          border:1px solid #eae4e5;
+          -webkit-box-shadow: inset 0 1px 1px #eae4e5;
+          -moz-box-shadow: inset 0 1px 1px #eae4e5;
+          box-shadow: inset 0 1px 1px #eae4e5;
+      }
+      .nice_input_checkbox input:hover + span{
+          border:1px solid #ccc;
+      }
+      .nice_input_checkbox input:active + span{
+          background-color: #fdfdfd;
+      }
+      .input_policy_row.error input + span,
+      .nice_input_checkbox input.haserror + span{
+          border:1px solid #e95640;
+      }
+      .input_policy_row.error input + span:before,
+      .nice_input_checkbox input.haserror + span:before {
+          content: '';
+          position: absolute;
+          z-index: 1;
+          width: 60px;
+          height: 60px;
+          top: -21px;
+          left: -21px;
+          background: rgba(233, 86, 64, 0.18);
+          border-radius: 100%;
+      }
+      #msOrder .input_policy_row.error{
+          border:none !important;
+      }
+      .nice_input_checkbox input:checked + span{
+          border:1px solid #ccc;
+      }
+      .nice_input_checkbox input:checked + span:after{
+          content: '';
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          background-position: 50%;
+          background-size: 12px;
+          background-repeat: no-repeat;
+          background-image: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTYuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjE2cHgiIGhlaWdodD0iMTZweCIgdmlld0JveD0iMCAwIDQ0Mi41MzMgNDQyLjUzMyIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNDQyLjUzMyA0NDIuNTMzOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+CjxnPgoJPHBhdGggZD0iTTQzNC41MzksOTguNDk5bC0zOC44MjgtMzguODI4Yy01LjMyNC01LjMyOC0xMS43OTktNy45OTMtMTkuNDEtNy45OTNjLTcuNjE4LDAtMTQuMDkzLDIuNjY1LTE5LjQxNyw3Ljk5M0wxNjkuNTksMjQ3LjI0OCAgIGwtODMuOTM5LTg0LjIyNWMtNS4zMy01LjMzLTExLjgwMS03Ljk5Mi0xOS40MTItNy45OTJjLTcuNjE2LDAtMTQuMDg3LDIuNjYyLTE5LjQxNyw3Ljk5Mkw3Ljk5NCwyMDEuODUyICAgQzIuNjY0LDIwNy4xODEsMCwyMTMuNjU0LDAsMjIxLjI2OWMwLDcuNjA5LDIuNjY0LDE0LjA4OCw3Ljk5NCwxOS40MTZsMTAzLjM1MSwxMDMuMzQ5bDM4LjgzMSwzOC44MjggICBjNS4zMjcsNS4zMzIsMTEuOCw3Ljk5NCwxOS40MTQsNy45OTRjNy42MTEsMCwxNC4wODQtMi42NjksMTkuNDE0LTcuOTk0bDM4LjgzLTM4LjgyOEw0MzQuNTM5LDEzNy4zMyAgIGM1LjMyNS01LjMzLDcuOTk0LTExLjgwMiw3Ljk5NC0xOS40MTdDNDQyLjUzNywxMTAuMzAyLDQzOS44NjQsMTAzLjgyOSw0MzQuNTM5LDk4LjQ5OXoiIGZpbGw9IiM5OWIwYWUiLz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8L3N2Zz4K);
+      }
+      .input_policy_row{
+          padding: 14px 0;
+      }
+      .input_policy_row .nice_input_checkbox{
+          float: left;
+      }
+      .input_policy_row .input_policy_text{
+          margin-left: 40px;
+      }
+  </style>
+
+<script src="main.js"></script>
+</body>
+</html>

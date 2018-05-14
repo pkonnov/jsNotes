@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Arrays</title>
+</head>
+<body>
+	<script>
+	var months = ["January", "Febuary", "March", "April"];
+	months[4] = "May";
+
+	console.log(months);
+	console.log(months.length);
+
+	months[months.length] = "June";
+	console.log(months);
+	//длина массива это не кооличество елементов в нём, а это индекс последнего элемента + 1
+	months[20] = "First months"
+	console.log(months);
+	console.log(months.length);
+	</script>	
+</body>
+</html>

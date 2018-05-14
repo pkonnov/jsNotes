@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+
+<div id="nav">
+  <div class="menu-item">
+    Menu one
+    <div class="submenu">
+      Submenu 0ne
+    </div>
+  </div>
+  <div class="menu-item">
+    Menu two
+    <div class="submenu">
+      Submenu two
+    </div>
+  </div>
+  <div class="menu-item">
+    Menu three
+    <div class="submenu">
+      Submenu Three
+    </div>
+  </div>
+</div>
+
+<style>
+  .menu-item{
+    border: 2px solid #646646;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+  }
+  .menu-item .submenu{
+    height: 40px;
+    width: 120px;
+    background: green;
+    position: absolute;
+    cursor: pointer;
+  }
+</style>
+
+<script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		//TODO: заменить элементы массива 
+		//'A'='T', 'G'='C'
+		function DNAStrand(dna){
+			var arrDna = dna.split('');
+			for(var i = 0;i < arrDna.length;i++){
+				if(arrDna[i] == 'A'){
+					arrDna.splice('T');
+				} else if(arrDna[i] == 'G'){
+					arrDna.splice('C');
+				}
+			}
+  		};
+
+  		console.log(DNAStrand('AAAA'));
+
+	</script>
+</body>
+</html>

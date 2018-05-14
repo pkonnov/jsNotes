@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>ArraysES5</title>
+</head>
+<body>
+  <script>
+    //не изменяет массив, а возвращает новый
+    var array = ["Some trext", "Pavel", "Another text", "Python", "JS"];
+    var numbers = [1,2,3,4,5,6,4]
+    array.forEach(function(element, index, array){ //forEach
+      console.log(element);
+      console.log(array[index] = element.toUpperCase());//изменяет исходный массив
+    });
+/////////////////////////////map
+    //console.log(array.map(function(e){return e.toUpperCase()})); //map
+////////////////////////filter
+    var filtered = array.filter(function(e){//filter
+      return e.indexOf('e') === -1; // отфильтровали массив, убрали слова с буквой Е
+    });
+    console.log(filtered);
+//////////////////////////////some, every
+    console.log(array.every(function(e){return e.length > 4})); //проверка елемента на его длину
+    console.log(array.some(function(e){return e.indexOf('x') !== -1})); //тоже самое, но вернет тру еслир найдет хотябы 1элемент по условию
+    console.log(array.some(function(e){return e.indexOf('z') !== -1}));
+/////////////////////////////reduce
+    var reduce = numbers.reduce(function(a,b){// c лева на право
+      return a + b;
+    });
+    console.log(reduce);
+/////////////////////////////reduceRight
+    var reduceRight = numbers.reduceRight(function(a,b){// c право на лево
+      return a ** b;
+    });
+    console.log(reduceRight);
+/////////////////////////////////////indexOf, lastindeOf
+    console.log(numbers.indexOf(1));
+    console.log(numbers.indexOf(4));
+    console.log(numbers.lastIndexOf(4));
+    console.log(numbers.indexOf(10));
+  </script>
+</body>
+</html>

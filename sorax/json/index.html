@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>json</title>
+</head>
+<body>
+	<script>
+		var user = {
+			fName: 'Pavel',
+			lName: 'Konnov',
+			id: 23455,
+			lastVisit: Date.now(),
+			friends: [243, 123, 545],
+			toJSON: function(){//возвращаем то что хотим
+				return {
+					fName: this.fName,
+					lName: this.lName
+				}
+			}
+		}
+
+		var userData = JSON.stringify(user);
+		console.log(userData);
+		console.log(JSON.parse(userData));
+	</script>
+</body>
+</html>
